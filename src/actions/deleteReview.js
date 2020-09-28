@@ -4,6 +4,6 @@ export const deleteReview = (reviewId, museumId) => {
         method: 'DELETE'
       })
       .then(response => response.json())
-      .then(museum => dispatch({type: 'DELETE_REVIEW', payload: museum}))
+      .then(review => dispatch({type: 'DELETE_REVIEW', payload: review}))
     }
   }
