@@ -11,17 +11,23 @@ handleDelete = (review) => {
 }
 
 render() {
-  console.log(this.props.reviews.reviews)
-  return this.props.reviews.reviews.map(review =>{
-    if(review.museum_id){
-      return(<div>      
-            <li key={review.id}>{review.review}<button onClick={() => this.handleDelete(review)}>Delete</button></li>
-            </div>
-          )
-    }
-  }
+  console.log(this.props.reviews)
+  return (
+    <div> 
+      {this.props.reviews ?   this.props.reviews.map(review =>{ return this.renderReview(review)})
+: <p>Reviews Loading</p>}
+    </div>
+  )
+}
+
+renderReview(review) {
+  return (<div>      
+    <li key={review.id}>{review.review}<button onClick={() => this.handleDelete(review)}>Delete</button></li>
+    </div>
 )
 }
+
+
 }
 
 export default connect(null, {deleteReview})(Reviews)

@@ -1,5 +1,6 @@
 import React from 'react';
 import MuseumContainer from './containers/MuseumContainer'
+import "./App.css"
 
 class App extends React.Component {
 

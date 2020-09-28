@@ -13,6 +13,8 @@ import museumReducer from '../reducers/museumReducer'
 class ReviewsContainer extends React.Component {
 
   componentDidMount() {
+    
+    console.log("in componentDidMount", this.props.museum)
     if(this.props.museum)
      {this.props.fetchReviews(this.props.museum.id)}     
   }
@@ -21,7 +23,7 @@ class ReviewsContainer extends React.Component {
     return (
       <div>
           <ReviewInput museum={this.props.museum}/><br/>
-          <Reviews reviews={this.props.museum && this.props.reviews}/><br/>
+          <Reviews reviews={this.props.museum && this.props.reviews.filter(review => review.museum_id == this.props.museum.id)}/><br/>
       </div>
       
     )
@@ -30,8 +32,8 @@ class ReviewsContainer extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    reviews: state.reviewReducer,
-    museum: state.museumReducer
+    reviews: state.reviewReducer.reviews
+    //museum: state.museumReducer
   }
 }
 
