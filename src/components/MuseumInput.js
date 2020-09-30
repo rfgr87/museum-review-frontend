@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addMuseum} from '../actions/addMuseum'
+import {Link} from 'react-router-dom'
+
 
 class MuseumInput extends React.Component {
 
@@ -18,6 +20,7 @@ class MuseumInput extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.addMuseum(this.state)
+    this.props.addDescription(this.state)
     this.setState({
       name: '',
       description: ''
@@ -27,13 +30,15 @@ class MuseumInput extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}><br></br>
           <label>Museum Name: </label>
           <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
-          <label>Museum Description: </label>
+          {/* <label>Museum Description: </label>
           <input type='text' placeholder='Description' value={this.state.description} name="description" onChange={this.handleChange}/><br/>
-          <input type="submit"/>
+          <input type="submit"/> */}
         </form>
+        <br></br><br></br>
+        <Link to='/'> Home</Link>
       </div>
     )
   }

@@ -20,20 +20,23 @@ class ReviewInput extends React.Component {
     this.setState({
       review: ''
     })
+    window.location.reload(false)
   }
 
+ 
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Review Info:</label>
+          <label>New Review:</label>
           <input type="text" name="review" value={this.state.review} onChange={this.handleChange}/>
           <input type="submit"/>
         </form>
       </div>
     )
-
   }
+
+  
 }
 
 

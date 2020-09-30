@@ -7,7 +7,7 @@ import {Route} from 'react-router-dom'
 
 import ReviewsContainer from '../containers/ReviewsContainer'
 
-const Museum = (props) => {
+const Review = (props) => {
 
   // ARREGLAR PARA PONER LO DE LOS MUSEOS
 
@@ -15,23 +15,19 @@ const Museum = (props) => {
   // let account = props.accounts[props.match.params.id - 1]
   
   // use find instead of filter
-  let museum = props.museums.filter(museum => museum.id == props.match.params.id)[0]
+  let review = props.reviews.filter(review => review.id == props.match.params.id)[0]
 
-  console.log(museum)
+  console.log(review)
   return (
 
     <div>
       <h2>
-        {museum ? museum.name : null}
-      </h2><br>
-      {museum ? museum.description : null}</br>
-      {museum && <ReviewsContainer museum={museum}/>}
-      <br></br><br></br>
-        <Link to='/'> Home</Link>
+        {review ? review.review : null}
+      </h2>
     </div>
   )
 
 
 }
 
-export default Museum
+export default Review

@@ -6,6 +6,9 @@ import Museums from '../components/Museums'
 import Museum from '../components/Museum'
 import MuseumInput from '../components/MuseumInput'
 import NavBar from '../components/NavBar'
+import {Link} from 'react-router-dom'
+
+import App from '../App'
 
 class MuseumContainer extends React.Component {
 

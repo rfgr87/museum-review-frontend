@@ -8,7 +8,6 @@ const NavBar = (props) => {
       <Link to='/museums' style={{paddingRight: '10px'}}>Museums  </Link>
       <Link to='/museums/new'> Add Museum</Link>
     </div>
-
   )
 }
 

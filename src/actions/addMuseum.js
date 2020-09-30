@@ -12,5 +12,4 @@ export const addMuseum = (data) => {
       .then(response => response.json())
       .then(account => dispatch({type: 'ADD_MUSEUM', payload: account}))
     }
-  
   }
