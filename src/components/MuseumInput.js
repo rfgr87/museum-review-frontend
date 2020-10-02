@@ -33,9 +33,6 @@ class MuseumInput extends React.Component {
         <form onSubmit={this.handleSubmit}><br></br>
           <label>Museum Name: </label>
           <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
-          {/* <label>Museum Description: </label>
-          <input type='text' placeholder='Description' value={this.state.description} name="description" onChange={this.handleChange}/><br/>
-          <input type="submit"/> */}
         </form>
         <br></br><br></br>
         <Link to='/'> Home</Link>

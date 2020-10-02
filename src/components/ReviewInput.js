@@ -8,6 +8,7 @@ class ReviewInput extends React.Component {
     review: ''
   }
 
+
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
@@ -20,7 +21,8 @@ class ReviewInput extends React.Component {
     this.setState({
       review: ''
     })
-    window.location.reload(false)
+    //history.pushState(this.state, '', 'localhost:3000/museums/:id/reviews/new')
+     window.location.reload(false)
   }
 
  
