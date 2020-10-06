@@ -1,14 +1,5 @@
 export default function museumReducer(state = {museums: []}, action) {
     switch (action.type) {
-      
-      case 'ADD_REVIEW':
-        let reviewsThree = state.reviews.map(review => {
-          if (review.id === review.payload.id) {
-            return review.payload
-          } else {
-            return review
-          }
-        })
       case 'FETCH_MUSEUMS':
         return {museums: action.payload}
       case 'ADD_MUSEUM':

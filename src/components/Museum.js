@@ -17,7 +17,6 @@ const Museum = (props) => {
   // use find instead of filter
   let museum = props.museums.filter(museum => museum.id == props.match.params.id)[0]
 
-  console.log(museum)
   return (
 
     <div>

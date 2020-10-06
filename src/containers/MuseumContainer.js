@@ -6,11 +6,13 @@ import Museums from '../components/Museums'
 import Museum from '../components/Museum'
 import MuseumInput from '../components/MuseumInput'
 import NavBar from '../components/NavBar'
-import {Link} from 'react-router-dom'
+import LikeButton from '../components/LikeButton'
 
 import App from '../App'
 
 class MuseumContainer extends React.Component {
+
+  state = {}
 
   componentDidMount() {
     this.props.fetchMuseums()
@@ -25,7 +27,6 @@ class MuseumContainer extends React.Component {
               <Route path='/museums/:id' render={(routerProps) => <Museum {...routerProps} museums={this.props.museums}/>}/>
               <Route path='/museums' render={(routerProps) => <Museums {...routerProps} museums={this.props.museums}/>}/>
             </Switch>
-
           </div>
       )
   }

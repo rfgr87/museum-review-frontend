@@ -53,7 +53,6 @@ class ReviewsContainer extends React.Component {
 const mapStateToProps = state => {
   return {
     reviews: state.reviewReducer.reviews
-    //museum: state.museumReducer
   }
 }
 
